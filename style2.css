@@ -1,0 +1,292 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  background-image: url(backgrounda.jpg);
+
+  background-size: cover;
+  /* Optional: Scale the image to cover the entire page */
+  background-repeat: no-repeat;
+  /* Optional: Prevent image repetition */
+}
+
+.element {
+  position: relative;
+  z-index: 1;
+  color: white;
+  /* or any other style for content */
+}
+
+
+/* Desktop View */
+.navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 50px;
+  background-color: aliceblue;
+  opacity: 0.7;
+  color: black;
+  padding: 5px;
+
+}
+
+#logo {
+  width: 50px;
+  height: auto;
+}
+
+
+
+
+.navbar .links {
+  justify-content: space-between;
+}
+
+.navbar a {
+  text-decoration: none;
+  font-weight: bolder;
+  color: rgb(27, 22, 22);
+  padding: 30px;
+  gap: 50px;
+
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 400px;
+}
+
+.intro {
+  align-self: center;
+  align-items: center;
+  padding-top: 100px;
+  /*margin-left: 100px;*/
+  padding-bottom: 10px;
+  gap: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+  font-size: 25px;
+}
+
+.intro button {
+  padding: 10px;
+  background-color: rgba(241, 241, 241, 0.3);
+  color: white;
+  border: none;
+  border-radius: 3px;
+  margin-top: 60px;
+  padding-top: 15px;
+  padding-left: 25px;
+  padding-bottom: 15px;
+  padding-right: 25px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  bottom: 10px;
+  align-items: center;
+  justify-content: center;
+  background-color: aliceblue;
+  color: black;
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  padding: 10px;
+}
+
+.signup {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-right: 100px;
+  margin-top: 10px;
+  border: 2px black;
+  /*backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);*/
+}
+
+.signup form {
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+  padding-bottom: 100px;
+  padding-right: 20px;
+  padding-left: 20px;
+  /* border: 0.2px solid rgb(241, 251, 253);*/
+  border-radius: 10px;
+  background-color: #4198B2;
+  /*#347928*/
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 50%;
+  align-self: center;
+  backdrop-filter: blur(10px);
+
+
+}
+
+.signup .loginsection {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+}
+
+.signup form input {
+  width: 300px;
+  padding: 10px;
+}
+
+.sta {
+  font-size: smaller;
+  color: aliceblue;
+  text-align: center;
+  margin-top: 10px;
+}
+
+#signup {
+  width: 100px;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.heading {
+  font-weight: 700;
+  font-size: 50px;
+  color: rgb(255, 241, 52);
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  text-align: center;
+}
+
+.signup .loginsection .forgot a {
+  font-family: "Gowun Batang", serif;
+
+  color: #C0EBA6;
+  font-size: small;
+  text-decoration: none;
+
+}
+
+.welcome-text {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+  font-size: 60px;
+  color: rgb(255, 241, 52);
+  margin-bottom: 20px;
+  margin-top: 50px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: reveal 6s infinite;
+
+}
+
+/*img {
+  opacity: 1;
+}*/
+
+@keyframes reveal {
+  0% {
+    width: 0;
+  }
+
+  50% {
+    width: 100%;
+  }
+
+  100% {
+    width: 0;
+  }
+}
+
+
+/* Tablet View (768px - 1024px) */
+@media (max-width: 1024px) {
+  .main {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .intro {
+    margin-left: 50px;
+  }
+
+  .signup {
+    margin-right: 50px;
+    margin-top: 50px;
+  }
+}
+
+
+/* Mobile View (480px - 767px) */
+@media (max-width: 767px) {
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+    padding: 5px;
+  }
+
+  .navbar a {
+    padding: 5px;
+  }
+
+  .main {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .intro {
+    margin-left: 20px;
+    padding-top: 50px;
+  }
+
+  .signup {
+    margin-right: 20px;
+    margin-top: 20px;
+  }
+
+  .signup form input {
+    width: 200px;
+  }
+}
+
+/* Smartphone View (320px - 479px) */
+@media (max-width: 479px) {
+  .navbar {
+    padding: 2px;
+  }
+
+  .navbar a {
+    padding: 2px;
+  }
+
+  .main {
+    gap: 10px;
+  }
+
+  .intro {
+    margin-left: 10px;
+    padding-top: 20px;
+  }
+
+  .signup {
+    margin-right: 10px;
+    margin-top: 10px;
+  }
+
+  .signup form input {
+    width: 150px;
+  }
+}
